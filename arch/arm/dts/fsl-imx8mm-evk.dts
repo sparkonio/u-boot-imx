@@ -466,7 +466,8 @@
 		#size-cells = <0>;
 
 		ethphy0: ethernet-phy@0 {
-			compatible = "ethernet-phy-ieee802.3-c22";
+		        compatible = "micrel,ksz9031";
+                        device_type = "ethernet-phy";
 			reg = <0>;
 			at803x,led-act-blind-workaround;
 			at803x,eee-okay;
@@ -515,10 +516,8 @@
 
 &usbotg1 {
 	status = "okay";
-	extcon = <&typec_ptn5110_1>;
 };
 
 &usbotg2 {
 	status = "okay";
-	extcon = <&typec_ptn5110_2>;
 };
